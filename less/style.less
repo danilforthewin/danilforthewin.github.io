@@ -1,0 +1,1271 @@
+/* colors */
+
+@green: rgb(135, 180, 72);
+@white: rgb(255, 255, 255);
+@grey: rgb(124, 134, 149);
+@black: rgb(28, 37, 52);
+@super-grey: rgb(199, 205, 217);
+
+/* fonts */
+
+@font-face {
+	font-family: 'Proxima Nova Rg';
+	src: url('../fonts/ProximaNova-Regular.eot');
+	src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+		url('../fonts/ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.reg {
+  font-family: 'Proxima Nova Rg';
+}
+
+/* basic */
+a{
+	text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:focus,
+a:active{
+	text-decoration:none;
+}
+
+body {
+	width:100%;
+	margin:0;
+}
+
+/* header */
+
+header {
+	width: 100%;
+	min-width: 970px;
+	height: 66px;
+	background-color: @green;
+  border-bottom: 2px solid #73993d;
+	position: relative;
+}
+
+.header{
+	/* Case header */
+	&-top{
+		padding-top: 11px;
+		width:100%;
+		max-width: 1440px;
+		margin: 0 auto;
+		padding-top: 11px;
+		padding-bottom: 17px;
+}
+	/* Logotype */
+	&-logo{
+		margin-left:16px;
+		float:left;
+		width: 161px;
+	}
+	/* Search input */
+	&-search{
+		margin: 0 417px 0 161px;
+		padding-left: 16px;
+		margin-top: 6px;
+		form{
+			::-webkit-input-placeholder {
+              color: @green;
+            }
+    	::-moz-placeholder {
+              color: @green;
+            }
+    	:-ms-input-placeholder {
+              color: @green;
+            }
+     	:-moz-placeholder {
+              color: @green;
+            }
+			input{
+				background: url(../img/search.png) no-repeat 10px center #73993d;
+			 	border: 0 none;
+				font: 15px Proxima Nova Rg, Sans-serif;
+				width: 100%;
+				height: 34px;
+				padding: 0px 22px 0px 37px;
+				border-radius:3px;
+				&:focus{
+					background:url(../img/search.png) no-repeat 10px center #fff;
+					font: 15px Proxima Nova Rg, Sans-serif;
+					padding: 0px 22px 0px 37px;
+			    outline:0;
+				}
+			}
+		}
+	}
+	/* Icon links */
+	&-icons{
+		float: right;
+		margin-right: 48px;
+		/* Icon links - Message icon */
+		&_messages {
+			width: 26px;
+			height: 22px;
+			cursor:pointer;
+		}
+		/* Icon links - Notofication icon */
+		&_notifications {
+			margin-top: 11px;
+			margin-left: 16px;
+			width:24px;
+			height:24px;
+			cursor:pointer;
+		}
+	}
+	/* Profile */
+	&-profile{
+		margin:0;
+		padding-left: 25px;
+		float: right;
+		cursor:pointer;
+		img{
+			transform: translateX(-42px);
+			position:absolute;
+			width:32px;
+			height: 32px;
+			margin-top: 7px;
+		}
+		span {
+			margin-top: 13px;
+    	display: block;
+			max-width: 185px;
+			margin-right:26px;
+			white-space: nowrap;
+  	  overflow: hidden;
+    	text-overflow: ellipsis;
+			font-size: 16px;
+			.reg;
+			color: @white;
+			font-size: 16px;
+		}
+	}
+}
+
+/* Content Website */
+.content {
+	position:relative;
+	width:100%;
+	min-width:970px;
+	max-width:1440px;
+	margin: 0 auto;
+	padding-bottom: 70px;
+	overflow:hidden;
+	.reg;
+
+	/* Content - Left unit */
+	&-left{
+		float: left;
+		width: 213px;
+		margin-left: -100%;
+		padding-left:15px;
+
+		/* Left unit - Navigation menu */
+		&_nav{
+			margin-bottom:0;
+			transform: translateY(-9px);
+			list-style: none;
+			padding-left: 0;
+			text-align: left;
+			font-size:16px;
+			/* Navigation menu - feed */
+			&-feed {
+				white-space:nowrap;
+				overflow: hidden;
+		    text-overflow: ellipsis;
+				display: list-item;
+				border-bottom: 1px solid @super-grey;
+				height:43px;
+				img{
+					transform:translateX(0px) translateY(7px);
+				}
+				a{
+					padding-left: 25px;
+					text-decoration: none;
+					color:@grey;
+				}
+			}
+			/* Navigation menu - colleague */
+			&-colleague {
+				white-space:nowrap;
+				overflow: hidden;
+		    text-overflow: ellipsis;
+				display: list-item;
+				border-bottom: 1px solid @super-grey;
+				height:44px;
+				padding-top: 5px;
+				img{
+					transform:translateX(1px) translateY(8px);
+				}
+				a{
+					padding-left: 25px;
+					text-decoration: none;
+					color:@grey;
+				}
+			}
+			/* Navigation menu - companies */
+			&-companies {
+				display: list-item;
+				border-bottom: 1px solid @super-grey;
+				height:46px;
+				padding-top:6px;
+				img{
+					transform:translateX(3px) translateY(8px);
+				}
+				a{
+					padding-left: 30px;
+					text-decoration: none;
+					color:@grey;
+				}
+			}
+			/* Navigation menu - service */
+			&-service {
+				white-space:nowrap;
+				overflow: hidden;
+		    text-overflow: ellipsis;
+				font-size:16px;
+				display: list-item;
+				border-bottom: 1px solid @super-grey;
+				height:45px;
+				padding-top:5px;
+				img{
+					transform:translateX(4px) translateY(7px);
+				}
+				a{
+					padding-left:31px;
+					text-decoration: none;
+					color:@grey;
+				}
+			}
+		}
+
+		/* Left unit - Advertisement (J.Walker) */
+		&_advertisement{
+			overflow: hidden;
+			text-overflow: ellipsis;
+			.reg;
+			padding-left: 1px;
+			padding-bottom:18px;
+			border-bottom: 1px solid @super-grey;
+			&-name{
+				text-align:left;
+				font-size:14px;
+				color: @grey;
+				line-height: 31px;
+				padding-left: 1px;
+			}
+			img{
+				cursor: pointer;
+				position: relative;
+				margin-top: 8px;
+				width: 210px;
+				height: 301px;
+			}
+			&-whose{
+				white-space:nowrap;
+				overflow: hidden;
+		    text-overflow: ellipsis;
+				display:table-cell;
+				margin:0;
+				text-align: left;
+    		font-size: 11px;
+    		color: #7c8695;
+			}
+			span{
+				max-width: 102px;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+			}
+		}
+
+		/* Left unit - Featured Products */
+		&_company{
+			.reg;
+			margin-top: 15px;
+
+			/* Featured Products - Header */
+			&-header{
+				&_left{
+				display:inline-block;
+				color:@grey;
+				text-align:left;
+				font-size: 14px;
+				}
+				span{
+					max-width: 129px;
+					overflow:hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+				}
+				&_right{
+					padding-top: 1px;
+					display:inline-block;
+					text-decoration: none;
+					color:@black;
+					float: right;
+					font-size: 14px;
+				}
+			}
+
+			/* Featured Products - Company Name 1 */
+			&-first{
+				width: 100%;
+				margin-top: 0;
+				display: table;
+				&_image{
+					display:inline-block;
+					float:left;
+					padding-top: 15px;
+					padding-left:1px;
+				img{
+					border-radius: 3px;
+					width: 80px;
+					height: 80px;
+					max-width: 80px;
+					min-width: 80px;
+				}
+			}
+				&_media{
+					display:inline-block;
+					font-size:14px;
+					padding-top: 11px;
+					padding-right: 1px;
+					float:right;
+					max-width:122px;
+					&-head{
+						float:left;
+						font-size:16px;
+						display:block;
+						font-weight:bold;
+						padding-bottom: 1px;
+
+					&_bold{
+						color:@black;
+					}
+				}
+				&-body{
+						line-height: 20px;
+						font-weight: 400;
+						color:@grey;
+						font-size:14px;
+				}
+				span{
+					max-width: 113px;
+					overflow:hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+				}
+				&-link{
+					padding-left: 1px;
+					font-size: 12px;
+					text-decoration: none;
+					color:@black;
+				}
+			}
+			}
+
+			/* Featured Products - Company Name 2 */
+			&-second{
+		    text-overflow: ellipsis;
+				width: 100%;
+				margin-top: 0;
+				display: table;
+				&_image{
+					display:inline-block;
+					float:left;
+					padding-top: 15px;
+					padding-left:1px;
+				img{
+					border-radius: 3px;
+					width: 80px;
+					height: 80px;
+					max-width: 80px;
+					min-width: 80px;
+				}
+			}
+				&_media{
+					display:inline-block;
+					font-size:14px;
+					padding-top: 11px;
+					padding-right: 1px;
+					float:right;
+					max-width:122px;
+					&-head{
+						float:left;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						font-size:16px;
+						display:block;
+						font-weight:bold;
+						padding-bottom: 1px;
+
+					&_bold{
+						color:@black;
+					}
+				}
+				&-body{
+						line-height: 20px;
+						font-weight: 400;
+						color:@grey;
+						font-size:14px;
+				}
+				span{
+					max-width: 113px;
+					overflow:hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+				}
+
+				&-link{
+					padding-left: 1px;
+					font-size: 12px;
+					text-decoration: none;
+					color:@black;
+				}
+			}
+			}
+
+			/* Featured Products - Company Name 3 */
+			&-third{
+		    text-overflow: ellipsis;
+				width: 100%;
+				margin-top: 0;
+				display: table;
+				padding-bottom:15px;
+				border-bottom: 1px solid @super-grey;
+				&_image{
+					display:inline-block;
+					float:left;
+					padding-top: 15px;
+					padding-left:1px;
+				img{
+					border-radius: 3px;
+					width: 80px;
+					height: 80px;
+					max-width: 80px;
+					min-width: 80px;
+				}
+			}
+				&_media{
+					display:inline-block;
+					font-size:14px;
+					padding-top: 11px;
+					padding-right: 1px;
+					float:right;
+					max-width:122px;
+					&-head{
+						float:left;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						font-size:16px;
+						display:block;
+						font-weight:bold;
+						padding-bottom: 1px;
+
+					&_bold{
+						color:@black;
+					}
+				}
+				&-body{
+						line-height: 20px;
+						font-weight: 400;
+						color:@grey;
+						font-size:14px;
+				}
+				span{
+					max-width: 113px;
+					overflow:hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+				}
+
+				&-link{
+					padding-left: 1px;
+					font-size: 12px;
+					text-decoration: none;
+					color:@black;
+					}
+				}
+			}
+		}
+
+		/* Left unit - Footer */
+		&_footer{
+			padding-top:15px;
+			padding-left: 1px;
+			&-copyright{
+				color: @super-grey;
+				font-size:12px;
+				display:block;
+				padding-bottom:9px;
+			}
+			span{
+				max-width: 130px;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+			}
+			a{
+				max-width: 83px;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+				text-decoration: none;
+				color: @super-grey;
+				font-size:12px;
+			}
+			&-left{
+				padding-right: 16px;
+			}
+			&-right{
+				white-space: nowrap;
+			}
+		}
+	}
+
+	/* Content - Central unit */
+	&-center{
+		.reg;
+		width: 100%;
+		float: left;
+		div#content-center{
+			margin: 0 244px 0 241px;
+			position: relative;
+		}
+		/* Central unit - Header */
+		&_header{
+			color: @black;
+	    font-size: 30px;
+			line-height: 32px;
+  	  font-weight: 400;
+  	  margin-top: 12px;
+  	  margin-bottom: 18px;
+			span{
+				width:226px;
+			}
+			a{
+				float:right;
+				width: 107px;
+				height: 30px;
+				font-weight: 400;
+				text-align: left;
+				line-height: 31px;
+				padding: 0 19px;
+				background-color: @green;
+				color: @white;
+				text-decoration: none;
+				font-size: 14px;
+				border-radius: 5px;
+			}
+		}
+		/* Central unit - Directories */
+		&_panel{
+    	border-radius: 5px;
+			margin-bottom: 79px;
+			border: 1px solid @super-grey;
+			&-body{
+				padding: 15px 9px;
+				position: relative;
+				display:table;
+				&_category {
+					margin: 0 auto;
+					width: 139px;
+					margin: 0 8px;
+					display: inline-block;
+					vertical-align: top;
+					text-align: center;
+					a{
+						width: 100%;
+						word-break: break-word;
+						div{
+							position: relative;
+							border: 1px solid #e0e2e6;
+							width: 138px;
+							height: 138px;
+						img{
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							margin: auto;
+							vertical-align:middle;
+									}
+								}
+							}
+					&-name{
+						word-break: break-word;
+						color:@black;
+						display: block;
+						text-align: center;
+						font-size: 13.61px;
+						margin: 13px 0 15px;
+						font-weight: 400;
+						line-height: 18px;
+						max-height: 36px;
+					}
+					&:hover{
+						span{
+							cursor:pointer;
+							color:@green;
+						}
+						div{
+							cursor:pointer;
+							border: 1px solid #e0e2e6;
+							background-color: #f4f7fb;
+						}
+					}
+					/* Central unit - Media Requests for smooth respons */
+					/* 986 -> 1122 = 30px */
+					@media (min-width:970px){
+						margin-left: 8px;
+						margin-right: 8px;
+					}
+					@media (min-width:992px){
+						margin-left: 9px;
+						margin-right: 9px;
+					}
+					@media (min-width:1004px){
+						margin-left: 11px;
+						margin-right: 11px;
+					}
+					@media (min-width:1016px){
+						margin-left: 13px;
+						margin-right: 13px;
+					}
+					@media (min-width:1028px){
+						margin-left: 14px;
+						margin-right: 14px;
+					}
+					@media (min-width:1040px){
+						margin-left: 15px;
+						margin-right: 15px;
+					}
+					@media (min-width:1046px){
+						margin-left: 19px;
+						margin-right: 19px;
+					}
+					@media (min-width:1064px){
+						margin-left: 20px;
+						margin-right: 20px;
+					}
+					@media (min-width:1070px){
+						margin-left: 21px;
+						margin-right: 21px;
+					}
+					@media (min-width:1076px){
+						margin-left: 22px;
+						margin-right: 22px;
+					}
+					@media (min-width:1084px){
+						margin-left: 23px;
+						margin-right: 23px;
+					}
+					@media (min-width:1088px){
+						margin-left: 24px;
+						margin-right: 24px;
+					}
+					@media (min-width:1094px){
+						margin-left: 25px;
+						margin-right: 25px;
+					}
+					@media (min-width:1100px){
+						margin-left: 26px;
+						margin-right: 26px;
+					}
+					@media (min-width:1106px){
+						margin-left: 27px;
+						margin-right: 27px;
+					}
+					@media (min-width:1112px){
+						margin-left: 28px;
+						margin-right: 28px;
+					}
+					@media (min-width:1118px){
+						margin-left: 29px;
+						margin-right: 29px;
+					}
+					@media (min-width:1122px){
+						margin-left: 30px;
+						margin-right: 30px;
+					}
+					/* 1127 -> 1279 = 25px */
+					@media (min-width:1132px){
+						margin-left: 7px;
+						margin-right: 7px;
+					}
+					@media (min-width:1140px){
+						margin-left: 8px;
+						margin-right: 8px;
+					}
+					@media (min-width:1148px){
+						margin-left: 9px;
+						margin-right: 9px;
+					}
+					@media (min-width:1156px){
+						margin-left: 10px;
+						margin-right: 10px;
+					}
+					@media (min-width:1164px){
+						margin-left: 11px;
+						margin-right: 11px;
+					}
+					@media (min-width:1172px){
+						margin-left: 12px;
+						margin-right: 12px;
+					}
+					@media (min-width:1180px){
+						margin-left: 13px;
+						margin-right: 13px;
+					}
+					@media (min-width:1188px){
+						margin-left: 14px;
+						margin-right: 14px;
+					}
+					@media (min-width:1196px){
+						margin-left: 15px;
+						margin-right: 15px;
+					}
+					@media (min-width:1204px){
+						margin-left: 16px;
+						margin-right: 16px;
+					}
+					@media (min-width:1212px){
+						margin-left: 17px;
+						margin-right: 17px;
+					}
+					@media (min-width:1220px){
+						margin-left: 18px;
+						margin-right: 18px;
+					}
+					@media (min-width:1228px){
+						margin-left: 19px;
+						margin-right: 19px;
+					}
+					@media (min-width:1236px){
+						margin-left: 20px;
+						margin-right: 20px;
+					}
+					@media (min-width:1252px){
+						margin-left: 22px;
+						margin-right: 22px;
+					}
+					@media (min-width:1260px){
+						margin-left: 23px;
+						margin-right: 23px;
+					}
+					@media (min-width:1268px){
+						margin-left: 24px;
+						margin-right: 24px;
+					}
+
+					@media (min-width:1279px){
+						margin-left: 25px;
+						margin-right: 25px;
+					}
+					/* 1285 -> 1455 = 24px */
+					@media (min-width:1285px){
+						margin-left: 7px;
+						margin-right: 7px;
+					}
+					@media (min-width:1295px){
+						margin-left:8px;
+						margin-right:8px;
+					}
+					@media (min-width:1305px){
+						margin-left:9px;
+						margin-right:9px;
+					}
+					@media (min-width:1315px){
+						margin-left:10px;
+						margin-right:10px;
+					}
+					@media (min-width:1325px){
+						margin-left:11px;
+						margin-right:11px;
+					}
+					@media (min-width:1335px){
+						margin-left:12px;
+						margin-right:12px;
+					}
+					@media (min-width:1345px){
+						margin-left:13px;
+						margin-right:13px;
+					}
+					@media (min-width:1355px){
+						margin-left:14px;
+						margin-right:14px;
+					}
+					@media (min-width:1365px){
+						margin-left:15px;
+						margin-right:15px;
+					}
+					@media (min-width:1375px){
+						margin-left:16px;
+						margin-right:16px;
+					}
+					@media (min-width:1385px){
+						margin-left:17px;
+						margin-right:17px;
+					}
+					@media (min-width:1395px){
+						margin-left:18px;
+						margin-right:18px;
+					}
+					@media (min-width:1405px){
+						margin-left:19px;
+						margin-right:19px;
+					}
+					@media (min-width:1415px){
+						margin-left:20px;
+						margin-right:20px;
+					}
+					@media (min-width:1425px){
+						margin-left:21px;
+						margin-right:21px;
+					}
+					@media (min-width:1435px){
+						margin-left: 22px;
+						margin-right: 22px;
+					}
+					@media (min-width:1445px){
+						margin-left: 23px;
+						margin-right: 23px;
+					}
+					@media (min-width:1455px){
+						margin-left: 24px;
+						margin-right: 24px;
+					}
+				}
+			}
+		}
+	}
+
+/* Content - Right unit */
+	&-right{
+		float: left;
+		width: 213px;
+		margin-left: -228px;
+			/* Right unit - People u may know */
+			&_people{
+				text-overflow: ellipsis;
+				.reg;
+				margin-top: 15px;
+				/* People u may know - Head */
+				&-header{
+					&_left{
+					display:inline-block;
+					color:@grey;
+					text-align:left;
+					font-size: 14px;
+					}
+					span{
+						max-width: 136px;
+						overflow:hidden;
+						text-overflow:ellipsis;
+						white-space: nowrap;
+					}
+					a{
+						padding-left: 2px;
+						text-decoration: none;
+						font-size: 14px;
+						padding-top: 2px;
+						text-decoration: none;
+						display:inline-block;
+						color:@black;
+						float: right;
+				}
+				}
+				/* People u may know - First option friend */
+				&-first{
+					width: 100%;
+					margin-top: 0;
+					display: table;
+					&_name{
+								max-width: 130px;
+								white-space:nowrap;
+								text-overflow: ellipsis;
+								overflow:hidden;
+								padding-top: 11px;
+								a {
+									text-decoration: none;
+									font-size:16px;
+									font-weight:bold;
+									padding-bottom: 1px;
+									color:@black;
+								}
+					}
+					&_image{
+						padding-top: 5px;
+						display:inline-block;
+						float:left;
+					img {
+						border-radius: 3px;
+						width: 80px;
+						height: 80px;
+						max-width: 80px;
+						min-width: 80px;
+					}
+				}
+					&_media{
+							display:inline-block;
+							text-overflow: ellipsis;
+							overflow:hidden;
+							font-size:14px;
+							padding-top: 3px;
+							padding-right: 1px;
+							float:right;
+							max-width:122px;
+							font-weight: 400;
+							color:@grey;
+							font-size:14px;
+							white-space: normal;
+							&-profession{
+								line-height: 18px;
+								max-height: 36px;
+							}
+							&-city{
+								max-width: 122px;
+								white-space: nowrap;
+								line-height: 21px;
+							}
+							&-link{
+								font-weight:bold;
+								display:block;
+								padding-top:2px;
+								font-size: 12px;
+								text-decoration: none;
+								color:@black;
+						}
+					}
+				}
+				/* People u may know - Second option name */
+				&-second{
+					width: 100%;
+					margin-top: 0;
+					display: table;
+					&_name{
+								max-width: 130px;
+								white-space:nowrap;
+								text-overflow: ellipsis;
+								overflow:hidden;
+
+								padding-left: 1px;
+								padding-top: 11px;
+								a {
+									text-decoration: none;
+									white-space: nowrap;
+									text-overflow: ellipsis;
+									font-size:16px;
+									font-weight:bold;
+									padding-bottom: 1px;
+									color:@black;
+								}
+					}
+					&_image{
+						padding-top: 5px;
+						display:inline-block;
+						float:left;
+					img {
+						border-radius: 3px;
+						width: 80px;
+						height: 80px;
+						max-width: 80px;
+						min-width: 80px;
+					}
+				}
+					&_media{
+							display:inline-block;
+							text-overflow: ellipsis;
+							overflow:hidden;
+							font-size:14px;
+							padding-top: 4px;
+							padding-right: 1px;
+							float:right;
+							max-width:122px;
+							font-weight: 400;
+							color:@grey;
+							font-size:14px;
+							white-space: normal;
+							&-profession{
+								line-height: 18px;
+								max-height: 36px;
+							}
+							&-city{
+								max-width: 122px;
+								white-space: nowrap;
+								line-height: 25px;
+							}
+							&-link{
+								font-weight:bold;
+								display:block;
+								font-size: 12px;
+								text-decoration: none;
+								color:@black;
+						}
+					}
+				}
+				/* People u may know - Third option name*/
+				&-third{
+					padding-left: 1px;
+					padding-bottom: 19px;
+					border-bottom: 1px solid @super-grey;
+					width: 100%;
+					margin-top: 0;
+					display: table;
+					&_name{
+								max-width: 130px;
+								white-space:nowrap;
+								text-overflow: ellipsis;
+								overflow:hidden;
+
+								padding-top: 12px;
+								a {
+									text-decoration: none;
+									white-space: nowrap;
+									text-overflow: ellipsis;
+									font-size:16px;
+									font-weight:bold;
+									padding-bottom: 1px;
+									color:@black;
+								}
+					}
+					&_image{
+						padding-top: 6px;
+						display:inline-block;
+						float:left;
+					img {
+						border-radius: 3px;
+						width: 80px;
+						height: 80px;
+						max-width: 80px;
+						min-width: 80px;
+					}
+				}
+					&_media{
+							display:inline-block;
+							text-overflow: ellipsis;
+							overflow:hidden;
+							font-size:14px;
+							padding-top: 4px;
+							padding-right: 2px;
+							float:right;
+							max-width:122px;
+							font-weight: 400;
+							color:@grey;
+							font-size:14px;
+							white-space: normal;
+							&-profession{
+								line-height: 17px;
+								max-height: 36px;
+							}
+							&-city{
+								max-width: 122px;
+								white-space: nowrap;
+								line-height: 29px;
+							}
+							&-link{
+								line-height:10px;
+								font-weight:bold;
+								display:block;
+								font-size: 12px;
+								text-decoration: none;
+								color:@black;
+						}
+					}
+				}
+			}
+			/* Right unit - Featured Products */
+			&_products{
+				.reg;
+				margin-top: 14px;
+
+				/* Featured Produtcts - Head */
+				&-header{
+					&_left{
+					display:inline-block;
+					color:@grey;
+					text-align:left;
+					font-size: 14px;
+					}
+					span{
+						max-width: 136px;
+						overflow:hidden;
+						text-overflow:ellipsis;
+						white-space: nowrap;
+					}
+					a{
+						padding-left: 2px;
+						text-decoration: none;
+						font-size: 14px;
+						padding-top: 2px;
+						text-decoration: none;
+						display:inline-block;
+						color:@black;
+						float: right;
+				}
+				}
+
+				/* Featured Produtcts - First Product name */
+				&-first{
+					width: 100%;
+					margin-top: 0;
+					display: table;
+					&_name{
+								max-width: 130px;
+								white-space:nowrap;
+								text-overflow: ellipsis;
+								overflow:hidden;
+								padding-left: 1px;
+								padding-top: 11px;
+								a {
+									text-decoration: none;
+									white-space: nowrap;
+									text-overflow: ellipsis;
+									font-size:16px;
+									font-weight:bold;
+									padding-bottom: 1px;
+									color:@black;
+								}
+
+					}
+					&_image{
+						padding-top: 4px;
+						display:inline-block;
+						float:left;
+					img {
+						border-radius: 3px;
+						width: 80px;
+						height: 80px;
+						max-width: 80px;
+						min-width: 80px;
+					}
+				}
+					&_media{
+							display:inline-block;
+							text-overflow: ellipsis;
+							overflow:hidden;
+							font-size:14px;
+							padding-left: 10px;
+							padding-top: 2px;
+							float:left;
+							max-width:122px;
+							font-weight: 400;
+							color:@grey;
+							font-size:14px;
+							white-space: normal;
+							&-info{
+								line-height: 10px;
+								max-height: 36px;
+							}
+					}
+				}
+
+				/* Featured Produtcts - Second Product name */
+				&-second{
+					width: 100%;
+					margin-top: 0;
+					display: table;
+					padding-bottom: 16px;
+					border-bottom: 1px solid @super-grey;
+					&_name{
+								max-width: 130px;
+								white-space:nowrap;
+								text-overflow: ellipsis;
+								overflow:hidden;
+
+								padding-top: 11px;
+								a {
+									text-decoration: none;
+									white-space: nowrap;
+									text-overflow: ellipsis;
+									font-size:16px;
+									font-weight:bold;
+									padding-bottom: 1px;
+									color:@black;
+								}
+					}
+					&_image{
+						padding-top: 5px;
+						display:inline-block;
+						float:left;
+					img {
+						border-radius: 3px;
+						width: 80px;
+						height: 80px;
+						max-width: 80px;
+						min-width: 80px;
+					}
+				}
+				&_media{
+						display:inline-block;
+						text-overflow: ellipsis;
+						overflow:hidden;
+						font-size:14px;
+						padding-left: 10px;
+						padding-top: 2px;
+						float:left;
+						max-width:122px;
+						font-weight: 400;
+						color:@grey;
+						font-size:14px;
+						white-space: normal;
+						&-info{
+							line-height: 10px;
+							max-height: 36px;
+						}
+				}
+				}
+			}
+
+				/* Right unit - Advertisement (Hottest) */
+				&_advertisement{
+					overflow:hidden;
+					text-overflow: ellipsis;
+					padding-top: 10px;
+					.reg;
+					padding-left: 1px;
+					&-name{
+						text-align:left;
+						font-size:14px;
+						color: @grey;
+						line-height: 31px;
+						padding-left: 1px;
+					}
+					img{
+						cursor: pointer;
+						position: relative;
+						padding-left: 1px;
+						margin-top: 9px;
+						width: 210px;
+						height: 301px;
+					}
+					&-whose{
+						line-height: 20px;
+						display:table-cell;
+						margin:0;
+						text-align: left;
+		    		font-size: 11px;
+		    		color: #7c8695;
+					}
+					span{
+						max-width: 102px;
+						overflow:hidden;
+						text-overflow:ellipsis;
+						white-space: nowrap;
+					}
+				}
+			}
+	}

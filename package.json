@@ -1,0 +1,24 @@
+{
+  "name": "test_on_internship",
+  "version": "1.0.0",
+  "description": "WebSite Denteez test for abz.agency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilforthewin/danilforthewin.github.io.git"
+  },
+  "author": "Danil Sergiyenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danilforthewin/danilforthewin.github.io/issues"
+  },
+  "homepage": "https://github.com/danilforthewin/danilforthewin.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}
